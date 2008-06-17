@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Vancura</name>
+	<comment></comment>
+	<projects>
+		<project>BulkLoader</project>
+		<project>ByteArray</project>
+		<project>FL</project>
+		<project>Foxaweb</project>
+		<project>GrantSkinner</project>
+		<project>Lifeztream</project>
+		<project>Popforge</project>
+		<project>Thunderbolt</project>
+		<project>TweenLite</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.flexlibnature</nature>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>bin-debug</name>
+			<type>2</type>
+			<location>/Users/Shimray/Desktop/Current/Other/AS3Classes/_SWC_</location>
+		</link>
+	</linkedResources>
+</projectDescription>

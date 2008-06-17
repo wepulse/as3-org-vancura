@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexLibProperties version="1">
+<includeClasses>
+<classEntry path="MenuService"/>
+<classEntry path="PageService"/>
+<classEntry path="RemotingEvent"/>
+<classEntry path="RemotingException"/>
+<classEntry path="RemotingService"/>
+<classEntry path="SystemService"/>
+<classEntry path="ViewService"/>
+</includeClasses>
+<includeResources/>
+<namespaceManifests/>
+</flexLibProperties>

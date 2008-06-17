@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexLibProperties version="1">
+<includeClasses>
+<classEntry path="org.vancura.druflash.MenuService"/>
+<classEntry path="org.vancura.druflash.PageService"/>
+<classEntry path="org.vancura.druflash.RemotingEvent"/>
+<classEntry path="org.vancura.druflash.RemotingException"/>
+<classEntry path="org.vancura.druflash.RemotingService"/>
+<classEntry path="org.vancura.druflash.SystemService"/>
+<classEntry path="org.vancura.druflash.ViewService"/>
+<classEntry path="org.vancura.graphics.Bitmapping"/>
+<classEntry path="org.vancura.graphics.Drawing"/>
+<classEntry path="org.vancura.graphics.QBitmap"/>
+<classEntry path="org.vancura.graphics.QSprite"/>
+<classEntry path="org.vancura.graphics.QTextField"/>
+<classEntry path="org.vancura.graphics.QVideo"/>
+<classEntry path="org.vancura.modalwindow.ModalWindow"/>
+<classEntry path="org.vancura.util.GlobalStage"/>
+<classEntry path="org.vancura.util.addChildren"/>
+<classEntry path="org.vancura.util.addEventListeners"/>
+<classEntry path="org.vancura.util.alert"/>
+<classEntry path="org.vancura.util.assign"/>
+<classEntry path="org.vancura.util.clone"/>
+<classEntry path="org.vancura.util.removeChildren"/>
+<classEntry path="org.vancura.util.removeEventListeners"/>
+</includeClasses>
+<includeResources/>
+<namespaceManifests/>
+</flexLibProperties>
