@@ -6,6 +6,7 @@
 <libraryPathEntry kind="4" path=""/>
 <libraryPathEntry kind="3" linkType="1" path="/Users/Shimray/Desktop/Current/Other/AS3Classes/_SWC_/Popforge.swc" useDefaultLinkType="false"/>
 <libraryPathEntry kind="3" linkType="1" path="/Users/Shimray/Desktop/Current/Other/AS3Classes/_SWC_/Thunderbolt.swc" useDefaultLinkType="false"/>
+<libraryPathEntry kind="3" linkType="1" path="/Users/Shimray/Desktop/Current/Other/AS3Classes/_SWC_/Tweener.swc" useDefaultLinkType="false"/>
 </libraryPath>
 <sourceAttachmentPath/>
 </compiler>
