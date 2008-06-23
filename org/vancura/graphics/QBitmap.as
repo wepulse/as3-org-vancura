@@ -32,8 +32,11 @@ package org.vancura.graphics {
 		*	QBitmap constructor.
 		*	@param c Config data
 		*/
-		public function QBitmap( c:Object ) {
+		public function QBitmap( c:Object = null ) {
 			super();
+			
+			// if config is not defined, prepare it
+			if( c == null ) c = new Object();
 
 			// Bitmap overrides and custom settings:
 			if( c.embed != undefined ) {

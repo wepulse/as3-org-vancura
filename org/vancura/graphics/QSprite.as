@@ -36,8 +36,11 @@ package org.vancura.graphics {
 		*	QSprite constructor.
 		*	@param c Config data.
 		*/
-		public function QSprite( c:Object ) {
+		public function QSprite( c:Object = null ) {
 			super();
+			
+			// if config is not defined, prepare it
+			if( c == null ) c = new Object();
 
 			// Sprite overrides and custom settings:
 			if( c.embed != undefined ) {

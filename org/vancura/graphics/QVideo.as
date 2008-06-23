@@ -32,7 +32,10 @@ package org.vancura.graphics {
 		*	QVideo construcor.
 		*	@param c Config data
 		*/
-		public function QVideo( c:Object ) {
+		public function QVideo( c:Object = null ) {
+			// if config is not defined, prepare it
+			if( c == null ) c = new Object();
+			
 			try{
 				super( c.width, c.height );
 			}

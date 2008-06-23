@@ -35,6 +35,9 @@ package org.vancura.graphics {
 		public function QTextField( c:Object = null ) {
 			super();
 
+			// if config is not defined, prepare it
+			if( c == null ) c = new Object();
+			
 			// TextField overrides and custom settings:
 			this.antiAliasType = ( c.antiAliasType != undefined ) ? c.antiAliasType : AntiAliasType.ADVANCED;
 			this.condenseWhite = ( c.condenseWhite != undefined ) ? c.condenseWhite : true;
