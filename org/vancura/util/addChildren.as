@@ -15,11 +15,11 @@ package org.vancura.util {
 
 
 	/**
-	 *	Add children to DisplayObject.
-	 *	@langversion ActionScript 3.0
-	 *	@playerversion Flash 9.0
-	 *	@since 22.03.2008
-	 *	@param obj Event dispatcher
+	 * Add children to DisplayObject.
+	 * @langversion ActionScript 3.0
+	 * @playerversion Flash 9.0
+	 * @since 22.03.2008
+	 * @param obj Event dispatcher
 	 */
 	public function addChildren( obj:*, ... children:Array ):void {
 		for each( var i:DisplayObject in children ) {

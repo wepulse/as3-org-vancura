@@ -1,8 +1,4 @@
-﻿/**
-*	Copyright 2008 Vaclav Vancura (vaclav.vancura.org)
-*
-*	@author Vaclav Vancura (vaclav.vancura.org)
-*/
+﻿// TODO: Optimize conditionals
 
 
 
@@ -83,8 +79,6 @@ package org.vancura.graphics {
 		*		y		- New Y position
 		*		width	- New width
 		*		height	- New height
-		*	
-		*	- TODO: Optimize conditionals
 		*/
 		public function morph( c:Object ):void {
 			__oldCacheAsBitmap = cacheAsBitmap;
