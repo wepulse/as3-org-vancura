@@ -7,6 +7,8 @@ package org.vancura.modalwindow {
 	import flash.text.*;
 
 	import org.vancura.graphics.*;
+	import org.vancura.util.addChildren;
+	import org.vancura.util.removeChildren;
 
 
 
