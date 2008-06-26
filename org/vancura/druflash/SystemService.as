@@ -1,11 +1,3 @@
-/**
-*	Copyright 2008 Vaclav Vancura (vaclav.vancura.org)
-*
-*	@author Vaclav Vancura (vaclav.vancura.org)
-*/
-
-
-
 package org.vancura.druflash {
 
 
@@ -17,12 +9,16 @@ package org.vancura.druflash {
 
 
 
-	/**
-	 *	Remoting service for system calls.
-	 *	@langversion ActionScript 3.0
-	 *	@playerversion Flash 9.0
-	 *	@since 14.01.2008
-	 */
+	/*
+		Class: SystemService
+		*Remoting service for system calls.*
+
+		Author: Vaclav Vancura <http://vaclav.vancura.org>
+
+		Since: 14.01.2008
+
+		- TODO: Write documentation
+	*/
 	public class SystemService extends RemotingService {
 
 
@@ -31,18 +27,12 @@ package org.vancura.druflash {
 
 
 
-		/**
-		*	Create new system service.
-		*/
 		public function SystemService() {
 			super();
 		}
 
 
 
-		/**
-		*	Request session id.
-		*/
 		public function requestSessID():void {
 			try {
 				var r:Responder = new Responder( __onGotSessID, onFault );
@@ -53,15 +43,6 @@ package org.vancura.druflash {
 
 
 
-		/**
-		*	Send a mail.
-		*	@param mailkey Mailkey
-		*	@param to To
-		*	@param subject Subject
-		*	@param body Body
-		*	@param from From
-		*	@param headers Headers
-		*/
 		public function sendMail( mailkey:String, to:String, subject:String, body:String, from:String, headers:Array ):void {
 			if( __sessID == '' ) throw new Error( 'sessID not ready yet, call requestSessID() first' );
 			if( mailkey == '' ) throw new Error( 'Mailkey required' );

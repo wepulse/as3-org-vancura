@@ -1,11 +1,3 @@
-/**
-*	Copyright 2008 Vaclav Vancura (vaclav.vancura.org)
-*
-*	@author Vaclav Vancura (vaclav.vancura.org)
-*/
-
-
-
 package org.vancura.graphics {
 
 
@@ -14,12 +6,14 @@ package org.vancura.graphics {
 
 
 
-	/**
-	 *	Quick creation of Video with initial data
-	 *	@langversion ActionScript 3.0
-	 *	@playerversion Flash 9.0
-	 *	@since 22.03.2008
-	 */
+	/*
+		Class: QVideo
+		*Quick creation of Video with initial data.*
+
+		Author: Vaclav Vancura <http://vaclav.vancura.org>
+
+		Since: 22.03.2008
+	*/
 	public class QVideo extends Video {
 
 
@@ -28,14 +22,10 @@ package org.vancura.graphics {
 
 
 
-		/**
-		*	QVideo construcor.
-		*	@param c Config data
-		*/
 		public function QVideo( c:Object = null ) {
 			// if config is not defined, prepare it
 			if( c == null ) c = new Object();
-			
+
 			try{
 				super( c.width, c.height );
 			}

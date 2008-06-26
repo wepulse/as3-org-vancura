@@ -1,11 +1,3 @@
-/**
-*	Copyright 2008 Vaclav Vancura (vaclav.vancura.org)
-*
-*	@author Vaclav Vancura (vaclav.vancura.org)
-*/
-
-
-
 package org.vancura.util {
 
 
@@ -14,14 +6,24 @@ package org.vancura.util {
 
 
 
-	/**
-	 *	Object cloner.
-	 *	@langversion ActionScript 3.0
-	 *	@playerversion Flash 9.0
-	 *	@since 17.06.2008
-	 *	@param source Source object
-	 *	@return Cloned object
-	 */
+	/*
+		Method: clone
+		*Object cloner.*
+
+		Author: Vaclav Vancura <http://vaclav.vancura.org>
+
+		Since: 17.06.2008
+
+		Parameters:
+
+			source		- Source object
+
+		Returns:
+
+			Cloned object
+
+		- TODO: Write documentation
+	*/
 	public function clone( source:* ):Object {
 		var copier:ByteArray = new ByteArray();
 		copier.writeObject( source as Object );

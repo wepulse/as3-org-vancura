@@ -1,11 +1,3 @@
-/**
-*	Copyright 2008 Vaclav Vancura (vaclav.vancura.org)
-*
-*	@author Vaclav Vancura (vaclav.vancura.org)
-*/
-
-
-
 package org.vancura.druflash {
 
 
@@ -17,12 +9,16 @@ package org.vancura.druflash {
 
 
 
-	/**
-	 *	Remoting service for menu calls.
-	 *	@langversion ActionScript 3.0
-	 *	@playerversion Flash 9.0
-	 *	@since 14.01.2008
-	 */
+	/*
+		Class: MenuService
+		*Remoting service for menu calls.*
+
+		Author: Vaclav Vancura <http://vaclav.vancura.org>
+
+		Since: 14.01.2008
+
+		- TODO: Write documentation
+	*/
 	public class MenuService extends RemotingService {
 
 
@@ -35,9 +31,6 @@ package org.vancura.druflash {
 
 
 
-		/**
-		*	Create new menu service.
-		*/
 		public function MenuService() {
 			super();
 			__menuData = new Array();
@@ -45,10 +38,6 @@ package org.vancura.druflash {
 
 
 
-		/**
-		*	Load main menu.
-		*	@param id Main menu ID
-		*/
 		public function loadMainMenu( id:String ):void {
 			try {
 				var r:Responder = new Responder( onLoadResult, onFault );
@@ -59,10 +48,6 @@ package org.vancura.druflash {
 
 
 
-		/**
-		*	Get menu item by it's path.
-		*	@param p Menu item path
-		*/
 		public function getMenuItemByPath( p:String ):Object {
 			for each( var i:Object in __menuData ) {
 				if( i.pathalias == p ) return i;

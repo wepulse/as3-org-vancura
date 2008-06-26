@@ -1,11 +1,3 @@
-/**
-*	Copyright 2008 Vaclav Vancura (vaclav.vancura.org)
-*
-*	@author Vaclav Vancura (vaclav.vancura.org)
-*/
-
-
-
 package org.vancura.graphics {
 
 
@@ -14,12 +6,14 @@ package org.vancura.graphics {
 
 
 
-	/**
-	 *	Quick creation of Bitmap with initial data
-	 *	@langversion ActionScript 3.0
-	 *	@playerversion Flash 9.0
-	 *	@since 21.03.2008
-	 */
+	/*
+		Class: QBitmap
+		*Quick creation of Bitmap with initial data.*
+
+		Author: Vaclav Vancura <http://vaclav.vancura.org>
+
+		Since: 21.03.2008
+	*/
 	public class QBitmap extends Bitmap {
 
 
@@ -28,15 +22,11 @@ package org.vancura.graphics {
 
 
 
-		/**
-		*	QBitmap constructor.
-		*	@param c Config data
-		*/
 		public function QBitmap( c:Object = null ) {
-			super();
-			
 			// if config is not defined, prepare it
 			if( c == null ) c = new Object();
+
+			super();
 
 			// Bitmap overrides and custom settings:
 			if( c.embed != undefined ) {

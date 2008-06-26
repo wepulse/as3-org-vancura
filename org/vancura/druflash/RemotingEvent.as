@@ -1,11 +1,3 @@
-/**
-*	Copyright 2008 Vaclav Vancura (vaclav.vancura.org)
-*
-*	@author Vaclav Vancura (vaclav.vancura.org)
-*/
-
-
-
 package org.vancura.druflash {
 
 
@@ -16,12 +8,16 @@ package org.vancura.druflash {
 
 
 
-	/**
-	 *	Remoting event filled with global remoting information.
-	 *	@langversion ActionScript 3.0
-	 *	@playerversion Flash 9.0
-	 *	@since 14.01.2008
-	 */
+	/*
+		Class: RemotingEvent
+		*Remoting event filled with global remoting information.*
+
+		Author: Vaclav Vancura <http://vaclav.vancura.org>
+
+		Since: 14.01.2008
+
+		- TODO: Write documentation
+	*/
 	public class RemotingEvent extends Event {
 
 
@@ -66,14 +62,6 @@ package org.vancura.druflash {
 
 
 
-		/**
-		*	Remoting event.
-		*	@param type Event type
-		*	@param bubbles Event bubbles
-		*	@param cancelable Event cancelable
-		*	@param remotingData Remoting data
-		*	@param remotingDescription Remoting description
-		*/
 		public function RemotingEvent( type:String, bubbles:Boolean = false, cancelable:Boolean = false, remotingData:Object = null, remotingDescription:String = null ) {
 			var isError:Boolean = true;
 
@@ -110,20 +98,12 @@ package org.vancura.druflash {
 
 
 
-		/**
-		*	Clone remoting event.
-		*	@return Cloned event
-		*/
 		public override function clone():Event {
 			return new RemotingEvent( type, bubbles, cancelable );
 		}
 
 
 
-		/**
-		*	Convert event to String.
-		*	@return String output
-		*/
 		public override function toString():String {
 			return formatToString( 'ViewEvent', 'type', 'bubbles', 'cancelable', 'eventPhase', 'data', 'description' );
 		}

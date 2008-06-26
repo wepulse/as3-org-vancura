@@ -1,11 +1,3 @@
-/**
-*	Copyright 2008 Vaclav Vancura (vaclav.vancura.org)
-*
-*	@author Vaclav Vancura (vaclav.vancura.org)
-*/
-
-
-
 package org.vancura.druflash {
 
 
@@ -17,12 +9,16 @@ package org.vancura.druflash {
 
 
 
-	/**
-	 *	Remoting service for page calls.
-	 *	@langversion ActionScript 3.0
-	 *	@playerversion Flash 9.0
-	 *	@since 14.01.2008
-	 */
+	/*
+		Class: PageService
+		*Remoting service for page calls.*
+
+		Author: Vaclav Vancura <http://vaclav.vancura.org>
+
+		Since: 14.01.2008
+
+		- TODO: Write documentation
+	*/
 	public class PageService extends RemotingService {
 
 
@@ -31,20 +27,12 @@ package org.vancura.druflash {
 
 
 
-		/**
-		*	Create new page service.
-		*	@param
-		*/
 		public function PageService() {
 			super();
 		}
 
 
 
-		/**
-		*	Load page by its node ID.
-		*	@param nid Node ID
-		*/
 		public function loadPageByNID( nid:int ):void {
 			try {
 				__gateway.call( 'node.load', new Responder( onLoadResult, onFault ), __apiKey, __sessID, nid );

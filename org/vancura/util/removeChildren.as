@@ -1,11 +1,3 @@
-/**
-*	Copyright 2008 Vaclav Vancura (vaclav.vancura.org)
-*
-*	@author Vaclav Vancura (vaclav.vancura.org)
-*/
-
-
-
 package org.vancura.util {
 
 
@@ -14,13 +6,21 @@ package org.vancura.util {
 
 
 
-	/**
-	 *	Remove children from DisplayObject.
-	 *	@langversion ActionScript 3.0
-	 *	@playerversion Flash 9.0
-	 *	@since 22.03.2008
-	 *	@param obj Event dispatcher
-	 */
+	/*
+		Method: removeChildren
+		*Remove children from DisplayObject.*
+
+		Author: Vaclav Vancura <http://vaclav.vancura.org>
+
+		Since: 22.03.2008
+
+		Parameters:
+
+			obj			- Target DisplayObject
+			children	- Children
+
+		- TODO: Write documentation
+	*/
 	public function removeChildren( obj:*, ... children:Array ):void {
 		for each( var i:DisplayObject in children ) {
 			obj.removeChild( i );

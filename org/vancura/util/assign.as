@@ -1,11 +1,3 @@
-/**
-*	Copyright 2008 Vaclav Vancura (vaclav.vancura.org)
-*
-*	@author Vaclav Vancura (vaclav.vancura.org)
-*/
-
-
-
 package org.vancura.util {
 
 
@@ -14,14 +6,21 @@ package org.vancura.util {
 
 
 
-	/**
-	 *	Assign properties from params to obj
-	 *	@langversion ActionScript 3.0
-	 *	@playerversion Flash 9.0
-	 *	@since 21.03.2008
-	 *	@param obj Target object
-	 *	@param params Source object
-	 */
+	/*
+		Method: assign
+		*Assign properties from params to Object.*
+
+		Author: Vaclav Vancura <http://vaclav.vancura.org>
+
+		Since: 21.03.2008
+
+		Parameters:
+
+			obj		- Target Object
+			params	- Source Object
+
+		- TODO: Write documentation
+	*/
 	public function assign( obj:Object, params:Object ):void {
 		for( var i:String in params ) {
 			obj[ i ] = params[ i ];

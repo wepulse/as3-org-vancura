@@ -1,11 +1,3 @@
-/**
-*	Copyright 2008 Vaclav Vancura (vaclav.vancura.org)
-*
-*	@author Vaclav Vancura (vaclav.vancura.org)
-*/
-
-
-
 package org.vancura.graphics {
 
 
@@ -14,12 +6,14 @@ package org.vancura.graphics {
 
 
 
-	/**
-	 *	Quick creation of TextField with initial data
-	 *	@langversion ActionScript 3.0
-	 *	@playerversion Flash 9.0
-	 *	@since 27.02.2008
-	 */
+	/*
+		Class: QTextField
+		*Quick creation of TextField with initial data.*
+
+		Author: Vaclav Vancura <http://vaclav.vancura.org>
+
+		Since: 27.02.2008
+	*/
 	public class QTextField extends TextField {
 
 
@@ -28,16 +22,12 @@ package org.vancura.graphics {
 
 
 
-		/**
-		*	QTextField constructor.
-		*	@param c Config data
-		*/
 		public function QTextField( c:Object = null ) {
-			super();
-
 			// if config is not defined, prepare it
 			if( c == null ) c = new Object();
-			
+
+			super();
+
 			// TextField overrides and custom settings:
 			this.antiAliasType = ( c.antiAliasType != undefined ) ? c.antiAliasType : AntiAliasType.ADVANCED;
 			this.condenseWhite = ( c.condenseWhite != undefined ) ? c.condenseWhite : true;
