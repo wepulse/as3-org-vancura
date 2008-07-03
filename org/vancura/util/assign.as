@@ -2,7 +2,7 @@ package org.vancura.util {
 
 
 
-	import org.osflash.thunderbolt.Logger;
+	import org.vancura.util.clone;
 
 
 
@@ -18,13 +18,17 @@ package org.vancura.util {
 
 			obj		- Target Object
 			params	- Source Object
+			
+		Returns:
+				
+			Resulting Object
 
 		- TODO: Write documentation
 	*/
-	public function assign( obj:Object, params:Object ):void {
-		for( var i:String in params ) {
-			obj[ i ] = params[ i ];
-		}
+	public function assign( obj:Object, params:Object ):Object {
+		var out:Object = ( obj );
+		for( var i:String in params ) out[ i ] = params[ i ];
+		return out;
 	}
 
 

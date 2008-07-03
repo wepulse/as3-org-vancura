@@ -33,7 +33,7 @@ package org.vancura.graphics {
 			super();
 
 			// Sprite overrides and custom settings:
-			if( c.embed != undefined ) {
+			if( c.embed ) {
 				if( !( c.embed is Sprite ) ) throw new Error( 'Invalid embed object' );
 				__embeddedSpr = c.embed;
 				addChild( __embeddedSpr );

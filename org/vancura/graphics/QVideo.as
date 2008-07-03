@@ -26,7 +26,7 @@ package org.vancura.graphics {
 			// if config is not defined, prepare it
 			if( c == null ) c = new Object();
 
-			try{
+			try {
 				super( c.width, c.height );
 			}
 			catch( e:Error ) {

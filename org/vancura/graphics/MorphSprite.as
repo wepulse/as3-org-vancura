@@ -107,14 +107,14 @@
 			super( c );
 
 			// assign values
-			morphTime = ( c.morphTime != null ) ? c.morphTime : defMorphTime;
-			morphTransition = ( c.morphTransition != null ) ? c.morphTransition : defMorphTransition;
-			isChangeWidthEnabled = ( c.changeWidthEnabled != null ) ? c.changeWidthEnabled : defIsChangeWidthEnabled;
-			isChangeHeightEnabled = ( c.changeHeightEnabled != null ) ? c.changeHeightEnabled : defIsChangeHeightEnabled;
-			isMorphXEnabled = ( c.morphXEnabled != null ) ? c.morphXEnabled : defIsMorphXEnabled;
-			isMorphYEnabled = ( c.morphYEnabled != null ) ? c.morphYEnabled : defIsMorphYEnabled;
-			isMorphWidthEnabled = ( c.morphWidthEnabled != null ) ? c.morphWidthEnabled : defIsMorphWidthEnabled;
-			isMorphHeightEnabled = ( c.morphHeightEnabled != null ) ? c.morphHeightEnabled : defIsMorphHeightEnabled;
+			morphTime = ( c.morphTime != undefined ) ? c.morphTime : defMorphTime;
+			morphTransition = ( c.morphTransition != undefined ) ? c.morphTransition : defMorphTransition;
+			isChangeWidthEnabled = ( c.changeWidthEnabled != undefined ) ? c.changeWidthEnabled : defIsChangeWidthEnabled;
+			isChangeHeightEnabled = ( c.changeHeightEnabled != undefined ) ? c.changeHeightEnabled : defIsChangeHeightEnabled;
+			isMorphXEnabled = ( c.morphXEnabled != undefined ) ? c.morphXEnabled : defIsMorphXEnabled;
+			isMorphYEnabled = ( c.morphYEnabled != undefined ) ? c.morphYEnabled : defIsMorphYEnabled;
+			isMorphWidthEnabled = ( c.morphWidthEnabled != undefined ) ? c.morphWidthEnabled : defIsMorphWidthEnabled;
+			isMorphHeightEnabled = ( c.morphHeightEnabled != undefined ) ? c.morphHeightEnabled : defIsMorphHeightEnabled;
 		}
 
 
@@ -147,14 +147,14 @@
 			if( isMorphHeightEnabled ) o.height = height;
 
 			var t:Object = new Object();
-			t.time = ( c.time != null ) ? c.time : morphTime;
-			t.transition = ( c.transition != null ) ? c.transition : morphTransition;
+			t.time = ( c.time != undefined ) ? c.time : morphTime;
+			t.transition = ( c.transition != undefined ) ? c.transition : morphTransition;
 			t.rounded = true;
 
-			if( isMorphXEnabled ) t.x = ( c.x ) ? c.x : o.x;
-			if( isMorphYEnabled ) t.y = ( c.y ) ? c.y : o.y;
-			if( isMorphWidthEnabled ) t.width = ( c.width ) ? c.width : o.width;
-			if( isMorphHeightEnabled ) t.height = ( c.height ) ? c.height : o.height;
+			if( isMorphXEnabled ) t.x = ( c.x != undefined ) ? c.x : o.x;
+			if( isMorphYEnabled ) t.y = ( c.y != undefined ) ? c.y : o.y;
+			if( isMorphWidthEnabled ) t.width = ( c.width != undefined ) ? c.width : o.width;
+			if( isMorphHeightEnabled ) t.height = ( c.height != undefined ) ? c.height : o.height;
 
 			t.onUpdate = function():void {
 				if( isMorphXEnabled ) x = this.x;

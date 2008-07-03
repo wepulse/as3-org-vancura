@@ -91,7 +91,7 @@ package org.vancura.druflash {
 				default: description = sprintf( 'Unknown error (code = %s)', type );
 			}
 
-			if( remotingDescription != null ) description = remotingDescription;
+			if( remotingDescription ) description = remotingDescription;
 			data = remotingData;
 			super( type, bubbles, cancelable );
 		}

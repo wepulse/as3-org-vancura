@@ -2,7 +2,9 @@ package org.vancura.graphics {
 
 
 
-	import flash.display.*;
+	import flash.display.BitmapData;
+	import flash.display.Bitmap;
+	import org.vancura.util.assign;
 
 
 
@@ -29,7 +31,7 @@ package org.vancura.graphics {
 			super();
 
 			// Bitmap overrides and custom settings:
-			if( c.embed != undefined ) {
+			if( c.embed ) {
 				if( c.embed is Bitmap ) this.bitmapData = c.embed.bitmapData;
 				else if( c.embed is BitmapData ) this.bitmapData = c.embed;
 				else throw new Error( 'Invalid embed object' );

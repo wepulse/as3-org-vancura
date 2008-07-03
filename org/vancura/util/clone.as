@@ -16,11 +16,11 @@ package org.vancura.util {
 
 		Parameters:
 
-			source		- Source object
+			source		- Source Object
 
 		Returns:
 
-			Cloned object
+			Cloned Object
 
 		- TODO: Write documentation
 	*/
