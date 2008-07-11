@@ -5,4 +5,10 @@
 <AS3Classpath generateProblems="false" type="lib" useAsSharedCode="false">framework.swc</AS3Classpath>
 <AS3Classpath generateProblems="false" type="lib" useAsSharedCode="false">rpc.swc</AS3Classpath>
 <AS3Classpath generateProblems="false" type="lib" useAsSharedCode="false">utilities.swc</AS3Classpath>
+<AS3Classpath generateProblems="true" type="source" useAsSharedCode="false">src</AS3Classpath>
+<AS3Classpath generateProblems="false" type="lib" useAsSharedCode="false">lib/swc/com-gskinner-as3.swc</AS3Classpath>
+<AS3Classpath generateProblems="true" type="source" useAsSharedCode="false">lib/src/org-osflash-thunderbolt-as3/source</AS3Classpath>
+<AS3Classpath generateProblems="true" type="source" useAsSharedCode="false">lib/src/org-bytearray-as3/src</AS3Classpath>
+<AS3Classpath generateProblems="true" type="source" useAsSharedCode="false">lib/src/de-popforge-as3/src</AS3Classpath>
+<AS3Classpath generateProblems="true" type="source" useAsSharedCode="false">lib/src/caurina-as3/as3</AS3Classpath>
 </AS3Classpath>

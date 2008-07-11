@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Vancura</name>
+	<name>org-vancura-as3</name>
 	<comment></comment>
 	<projects>
-		<project>BulkLoader</project>
-		<project>ByteArray</project>
-		<project>FL</project>
-		<project>Foxaweb</project>
-		<project>GrantSkinner</project>
-		<project>Lifeztream</project>
-		<project>Popforge</project>
-		<project>Thunderbolt</project>
-		<project>TweenLite</project>
 	</projects>
 	<buildSpec>
-		<buildCommand>
-			<name>com.adobe.flexbuilder.project.flexbuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 		<buildCommand>
 			<name>com.powerflasher.fdt.core.FlashBuilder</name>
 			<arguments>
@@ -26,40 +12,33 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>com.adobe.flexbuilder.project.flexlibnature</nature>
-		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
 		<nature>com.powerflasher.fdt.core.FlashNature</nature>
 	</natures>
 	<linkedResources>
 		<link>
-			<name>bin-debug</name>
-			<type>2</type>
-			<location>/Users/Shimray/Desktop/Current/Other/AS3Classes/_SWC_</location>
-		</link>
-		<link>
 			<name>playerglobal.swc</name>
 			<type>1</type>
-			<locationURI>Flex_SDK_3/frameworks/libs/player/playerglobal.swc</locationURI>
+			<locationURI>FlexSDK3/frameworks/libs/player/playerglobal.swc</locationURI>
 		</link>
 		<link>
 			<name>rpc.swc</name>
 			<type>1</type>
-			<locationURI>Flex_SDK_3/frameworks/libs/rpc.swc</locationURI>
+			<locationURI>FlexSDK3/frameworks/libs/rpc.swc</locationURI>
 		</link>
 		<link>
 			<name>utilities.swc</name>
 			<type>1</type>
-			<locationURI>Flex_SDK_3/frameworks/libs/utilities.swc</locationURI>
+			<locationURI>FlexSDK3/frameworks/libs/utilities.swc</locationURI>
 		</link>
 		<link>
 			<name>flex.swc</name>
 			<type>1</type>
-			<locationURI>Flex_SDK_3/frameworks/libs/flex.swc</locationURI>
+			<locationURI>FlexSDK3/frameworks/libs/flex.swc</locationURI>
 		</link>
 		<link>
 			<name>framework.swc</name>
 			<type>1</type>
-			<locationURI>Flex_SDK_3/frameworks/libs/framework.swc</locationURI>
+			<locationURI>FlexSDK3/frameworks/libs/framework.swc</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

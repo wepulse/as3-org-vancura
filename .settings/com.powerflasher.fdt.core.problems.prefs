@@ -1,0 +1,4 @@
+#Wed Jul 09 12:40:38 CEST 2008
+com.powerflasher.fdt.declarations.localVariableNeverUsed.AS3=Warning
+com.powerflasher.fdt.declarations.parameterNeverUsed.AS3=Warning
+eclipse.preferences.version=1
