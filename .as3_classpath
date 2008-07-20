@@ -11,4 +11,5 @@
 <AS3Classpath generateProblems="true" type="source" useAsSharedCode="false">lib/src/org-bytearray-as3/src</AS3Classpath>
 <AS3Classpath generateProblems="true" type="source" useAsSharedCode="false">lib/src/de-popforge-as3/src</AS3Classpath>
 <AS3Classpath generateProblems="true" type="source" useAsSharedCode="false">lib/src/caurina-as3/as3</AS3Classpath>
+<AS3Classpath generateProblems="true" type="source" useAsSharedCode="false">lib/src/br-com-stimuli-as3/src</AS3Classpath>
 </AS3Classpath>

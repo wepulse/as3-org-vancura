@@ -54,8 +54,8 @@ package org.vancura.druflash {
 					$gateway.addEventListener(SecurityErrorEvent.SECURITY_ERROR, _onSecurityErrorHandler, false, 0, true);
 					$gateway.connect($gatewayPath);
 				}
-				catch(e:Error) {
-					throw new RemotingException(sprintf('Error initializing remoting (...)\n%s', e.message)); 
+				catch(event:Error) {
+					throw new RemotingException(sprintf('Error initializing remoting (...)\n%s', event.message)); 
 				}
 			}
 		}

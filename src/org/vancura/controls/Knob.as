@@ -107,6 +107,7 @@ package org.vancura.controls {
 		
 		public function set areEventsEnabled(value:Boolean):void {
 			_areEventsEnabled = value;
+			$backBtn.areEventsEnabled = value;
 		}
 	}
 }

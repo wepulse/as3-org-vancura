@@ -164,6 +164,7 @@ package org.vancura.controls {
 			$thumbBtn.addEventListener(MouseEvent.MOUSE_DOWN, _onThumbPress, false, 0, true);
 			$thumbBtn.addEventListener(MouseEvent.MOUSE_UP, _onThumbRelease, false, 0, true);
 			$thumbBtn.addEventListener(MouseEvent.MOUSE_WHEEL, _onWheel, false, 0, true);
+			$thumbBtn.addEventListener(ButtonEvent.RELEASE_OUTSIDE, _onThumbRelease, false, 0, true);
 		}
 
 		
@@ -178,6 +179,7 @@ package org.vancura.controls {
 			$thumbBtn.removeEventListener(MouseEvent.MOUSE_DOWN, _onThumbPress);
 			$thumbBtn.removeEventListener(MouseEvent.MOUSE_UP, _onThumbRelease);
 			$thumbBtn.removeEventListener(MouseEvent.MOUSE_WHEEL, _onWheel);
+			$thumbBtn.removeEventListener(ButtonEvent.RELEASE_OUTSIDE, _onThumbRelease);
 
 			// destroy sub controls
 			$thumbBtn.destroy();
@@ -208,6 +210,8 @@ package org.vancura.controls {
 
 			Tweener.removeTweens($thumbBtn);
 			Tweener.addTween($thumbBtn, t);
+			
+			dispatchEvent(new SliderEvent(SliderEvent.REFRESH, true, false, $currentThumbPos));
 		}
 
 		
@@ -298,14 +302,14 @@ package org.vancura.controls {
 
 		
 		
-		private function _onThumbRelease(event:MouseEvent):void {
+		private function _onThumbRelease(event:Event):void {
 			if(!_areEventsEnabled) return; // events are not enabled
 			
 			$isDraggingEnabled = false;
 			$dragOffs = $thumbOffs * -1;
 
 			Tweener.addTween($thumbBtn, {alpha:1, time:$releaseTime, transition:'easeOutSine', onComplete:function():void {
-				$thumbBtn.cacheAsBitmap = true;
+				$thumbBtn.cacheAsBitmap = false;
 			}});
 
 			removeEventListener(Event.ENTER_FRAME, _onThumbMove);
@@ -338,6 +342,7 @@ package org.vancura.controls {
 		
 		public function set areEventsEnabled(value:Boolean):void {
 			_areEventsEnabled = value;
+			$thumbBtn.areEventsEnabled = value;
 		}
 	}
 }

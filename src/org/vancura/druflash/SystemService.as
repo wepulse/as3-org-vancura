@@ -69,8 +69,8 @@ package org.vancura.druflash {
 				var r:Responder = new Responder(_onGotSendMailResponse, onFault);
 				$gateway.call('system.mail', r, $apiKey, $sessID, mailkey, to, subject, body, from, headers);
 			}
-			catch(e:Error) {
-				throw new RemotingException(sprintf('Error while sending mail (...)\n%s', e.message)); 
+			catch(err:Error) {
+				throw new RemotingException(sprintf('Error while sending mail (...)\n%s', err.message)); 
 			}
 		}
 

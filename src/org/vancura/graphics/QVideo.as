@@ -22,7 +22,7 @@ package org.vancura.graphics {
 			try {
 				super(c.width, c.height);
 			}
-			catch(e:Error) {
+			catch(err:Error) {
 				if(c.width == undefined) throw new Error('Video width undefined');
 				if(c.height == undefined) throw new Error('Video height undefined');
 			}

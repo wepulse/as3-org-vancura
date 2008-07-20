@@ -57,6 +57,7 @@ package org.vancura.controls {
 		public static var defTextPressFilters:Array = DefaultControlSettings.DEF_TEXT_PRESS_FILTERS;
 		public static var defTextPressFormat:TextFormat = DefaultControlSettings.DEF_TEXT_PRESS_FORMAT;
 		public static var defTextPressOffsY:Number = DefaultControlSettings.DEF_TEXT_PRESS_OFFS_Y;
+		public static var allButtons:Array;
 		protected var $iconOutBM:QBitmap;
 		protected var $iconOverBM:QBitmap;
 		protected var $iconPressBM:QBitmap;
@@ -142,9 +143,9 @@ package org.vancura.controls {
 			$itemOutSBM.scale9Grid = $itemOverSBM.scale9Grid = $itemPressSBM.scale9Grid = sbm.getColorBoundsRect(sbm.getPixel32($itemWidth / 2, $itemHeight / 2), 0, false);
 
 			// add graphics
-			$textOutTextField = new QTextField({defaultTextFormat:(c.textOutFormat != undefined) ? c.textOutFormat : defTextOutFormat, filters:(c.textOutFilters != undefined) ? c.textOutFilters : defTextOutFilters});
-			$textOverTextField = new QTextField({defaultTextFormat:(c.textOverFormat != undefined) ? c.textOverFormat : defTextOverFormat, filters:(c.textOverFilters != undefined) ? c.textOverFilters : defTextOverFilters});
-			$textPressTextField = new QTextField({defaultTextFormat:(c.textPressFormat != undefined) ? c.textPressFormat : defTextPressFormat, filters:(c.textPressFilters != undefined) ? c.textPressFilters : defTextPressFilters});
+			$textOutTextField = new QTextField({defaultTextFormat:(c.textOutFormat != undefined) ? c.textOutFormat : defTextOutFormat, filters:(c.textOutFilters != undefined) ? c.textOutFilters : defTextOutFilters, mouseEnabled:false});
+			$textOverTextField = new QTextField({defaultTextFormat:(c.textOverFormat != undefined) ? c.textOverFormat : defTextOverFormat, filters:(c.textOverFilters != undefined) ? c.textOverFilters : defTextOverFilters, mouseEnabled:false});
+			$textPressTextField = new QTextField({defaultTextFormat:(c.textPressFormat != undefined) ? c.textPressFormat : defTextPressFormat, filters:(c.textPressFilters != undefined) ? c.textPressFilters : defTextPressFilters, mouseEnabled:false});
 			$iconOutBM = new QBitmap({filters:(c.textOutFilters != undefined) ? c.textOutFilters : defTextOutFilters});
 			$iconOverBM = new QBitmap({filters:(c.textOverFilters != undefined) ? c.textOutFilters : defTextOverFilters});
 			$iconPressBM = new QBitmap({filters:(c.textPressFilters != undefined) ? c.textOutFilters : defTextPressFilters});
@@ -193,6 +194,10 @@ package org.vancura.controls {
 				$isMorphWidthEnabled = false;
 				$isMorphHeightEnabled = false;
 			}
+			
+			// add to all list
+			if(allButtons == null) allButtons = new Array();
+			allButtons.push(this);
 		}
 
 		
@@ -209,6 +214,8 @@ package org.vancura.controls {
 			$itemActiveSpr.removeEventListener(MouseEvent.MOUSE_OUT, _onOut);
 			$itemActiveSpr.removeEventListener(MouseEvent.MOUSE_DOWN, _onPress);
 			$itemActiveSpr.removeEventListener(MouseEvent.MOUSE_UP, _onRelease);
+			
+			// TODO: remove from all list
 		}
 
 		
@@ -432,7 +439,7 @@ package org.vancura.controls {
 
 			if(event.currentTarget != $itemActiveSpr) {
 				// release outside
-				_forceRelease();
+				forceRelease();
 			}
 			
 			else if(_currentDraggingButton != this) {
@@ -456,12 +463,14 @@ package org.vancura.controls {
 
 		
 		
-		private function _forceRelease():void {
+		public function forceRelease():void {
 			_currentDraggingButton = null;
 			
 			Tweener.addTween($textOutTextField, {alpha:$textOutAlpha, time:$pressOutTime, transition:'easeOutSine'});
 			Tweener.addTween($itemOverSBM, {alpha:0, time:$overOutTime, transition:'easeOutSine'});
-			
+			Tweener.addTween($itemPressSBM, {alpha:0, time:$pressOutTime, transition:'easeInSine'});
+			Tweener.addTween($textPressTextField, {alpha:0, time:$pressOutTime, transition:'easeInSine'});
+			if($isIconEnabled) Tweener.addTween($iconPressBM, {alpha:0, time:$pressOutTime, transition:'easeInSine'});
 			if($isIconEnabled) Tweener.addTween($iconOutBM, {alpha:$textOutAlpha, time:$pressOutTime, transition:'easeOutSine'});
 			
 			dispatchEvent(new ButtonEvent(ButtonEvent.RELEASE_OUTSIDE));
@@ -478,7 +487,22 @@ package org.vancura.controls {
 		public function set areEventsEnabled(value:Boolean):void {
 			_areEventsEnabled = value;
 			$itemActiveSpr.mouseEnabled = value;
-			if(!value) _forceRelease();
+			if(!value) forceRelease();
+		}
+		
+		
+		
+		public function get textWidth():Number {
+			return $textOutTextField.textWidth;
+		}
+		
+		
+		
+		public static function releaseAll():void {
+			for each(var b:Button in Button.allButtons) {
+				try { b.forceRelease(); }
+				catch(err:Error) {}
+			}
 		}
 	}
 }

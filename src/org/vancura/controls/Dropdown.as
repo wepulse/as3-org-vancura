@@ -208,7 +208,7 @@ package org.vancura.controls {
 
 		
 		
-		private function _onOver(e:ButtonEvent):void {
+		private function _onOver(event:ButtonEvent):void {
 			if(!_areEventsEnabled) return; 
 			// events are not enabled
 			if(!_isEditing) {
@@ -219,7 +219,7 @@ package org.vancura.controls {
 
 		
 		
-		private function _onOut(e:ButtonEvent):void {
+		private function _onOut(event:ButtonEvent):void {
 			if(!_areEventsEnabled) return; 
 			// events are not enabled
 			if(!_isEditing) _setOut();
@@ -227,13 +227,13 @@ package org.vancura.controls {
 
 		
 		
-		private function _onReleaseInside(e:ButtonEvent):void {
+		private function _onReleaseInside(event:ButtonEvent):void {
 			if(!_areEventsEnabled) return; // events are not enabled
 		}
 
 		
 		
-		private function _onReleaseOutside(e:ButtonEvent):void {
+		private function _onReleaseOutside(event:ButtonEvent):void {
 			if(!_areEventsEnabled) return; 
 			// events are not enabled
 			if(!_isEditing) _setOut();
@@ -249,6 +249,8 @@ package org.vancura.controls {
 		
 		public function set areEventsEnabled(value:Boolean):void {
 			_areEventsEnabled = value;
+			$backBtn.areEventsEnabled = value;
+			$dropBtn.areEventsEnabled = value;
 			if(!value) _setOut();
 		}
 	}
